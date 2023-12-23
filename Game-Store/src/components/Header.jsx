@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import logo from "./../assets/images/store-logo.png";
 import { IoSearch } from "react-icons/io5";
-import { FaMoon } from "react-icons/fa";
+import { FaMoon, FaShoppingCart } from "react-icons/fa";
 import { FaSun } from "react-icons/fa";
 
 const Header = () => {
@@ -17,7 +17,7 @@ const Header = () => {
           className="outline-none px-3 bg-slate-50"
         />
       </div>
-      <div className="px-7 pt-5 w-[50px] h-[54px] ">
+      <div className="px-7 fle pt-5 w-[50px] h-[54px] ">
         {toggle ? (
           <FaMoon
             className="bg-slate-500 text-[35px] p-1 text-black rounded-full cursor-pointer mt-[-6px]"
@@ -25,10 +25,11 @@ const Header = () => {
           />
         ) : (
           <FaSun
-            className="bg-slate-500 text-[40px] te p-1 text-black rounded-full cursor-pointer mt-[-6px]"
+            className="bg-white text-[40px] te p-3 text-black rounded-full cursor-pointer mt-[-6px]"
             onClick={() => setToggle(!toggle)}
           />
         )}
+        {/* <FaShoppingCart /> */}
       </div>
     </div>
   );
