@@ -1,11 +1,16 @@
-import React, { useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import logo from "./../assets/images/store-logo.png";
 import { IoSearch } from "react-icons/io5";
-import { FaMoon, FaShoppingCart } from "react-icons/fa";
+import { FaMoon} from "react-icons/fa";
 import { FaSun } from "react-icons/fa";
+import { ThemeContext } from "../Context/ThemeContext";
 
 const Header = () => {
-  const [toggle, setToggle] = useState(false);
+  const [toggle, setToggle] = useState(true);
+  const {theme,setTheme}=useContext(ThemeContext);
+  useEffect(()=>{
+    console.log("theme",theme);
+  },[])
   return (
     <div className="flex items-center mx-5">
       <img src={logo} width={240} height={60} className="p-5" />
@@ -18,15 +23,15 @@ const Header = () => {
         />
       </div>
       <div className="px-7 fle pt-5 w-[50px] h-[54px] ">
-        {toggle ? (
+        {theme=='light' ? (
           <FaMoon
-            className="bg-slate-500 text-[35px] p-1 text-black rounded-full cursor-pointer mt-[-6px]"
-            onClick={() => setToggle(!toggle)}
+            className="bg-slate-300 text-[35px] p-2 text-black rounded-full cursor-pointer mt-[-6px]"
+            onClick={() => {setTheme('dark');localStorage.setItem('theme','dark')}}
           />
         ) : (
           <FaSun
             className="bg-white text-[40px] te p-3 text-black rounded-full cursor-pointer mt-[-6px]"
-            onClick={() => setToggle(!toggle)}
+            onClick={() => {setTheme('light');localStorage.setItem('theme','light')}}
           />
         )}
         {/* <FaShoppingCart /> */}
