@@ -14,7 +14,7 @@ function App() {
       <div
         className={`${theme} ${
           theme == "dark" ? "bg-slate-500" : null
-        } h-[100vh]`}
+        } min-h-[100vh] `}
       >
         <Header />
         <Home />
