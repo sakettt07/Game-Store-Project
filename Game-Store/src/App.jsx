@@ -13,7 +13,7 @@ function App() {
     <ThemeContext.Provider value={{ theme, setTheme }}>
       <div
         className={`${theme} ${
-          theme == "dark" ? "bg-slate-500" : null
+          theme == "dark" ? "bg-black" : "bg-cyan-200"
         } min-h-[100vh] `}
       >
         <Header />

@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
-import logo from "./../assets/images/store-logo.png";
+import logo from "./../assets/images/store-logo2.png";
 import { IoSearch } from "react-icons/io5";
 import { FaMoon} from "react-icons/fa";
 import { FaSun } from "react-icons/fa";
@@ -9,11 +9,11 @@ const Header = () => {
   const [toggle, setToggle] = useState(true);
   const {theme,setTheme}=useContext(ThemeContext);
   useEffect(()=>{
-    console.log("theme",theme);
+    // console.log("theme",theme);
   },[])
   return (
     <div className="flex items-center mx-5">
-      <img src={logo} width={240} height={60} className="p-5" />
+      <img src={logo} width={120} height={50} className="p-5" />
       <div className="flex bg-slate-50 p-4 mt-2 items-center w-[70%] rounded-full">
         <IoSearch />
         <input
