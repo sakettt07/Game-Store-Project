@@ -48,7 +48,7 @@ const TrendingGames = ({ gamelist }) => {
                     {gamelist.map((item, index) => (
                         <div key={index} className=' gap-9 rounded-xl bg-white/20 shadow-lg ring-1 ring-black/5 group hover:scale-95 cursor-pointer transition-all duration-100 ease-in'>
                             <img src={item.background_image} className='rounded-lg object-cover rounded-b-none h-[270px]' alt={item.name} />
-                            <h2 className='dark:text-white text-[20px] font-semibold p-2'>{item.name}</h2>
+                            <h2 className='dark:text-white text-[17px] font-semibold p-2'>{item.name}</h2>
                         </div>
                     ))}
                 </Slider>
