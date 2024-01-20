@@ -1,4 +1,4 @@
-                                                     BYTEBATTLES (Best work on Desktop) 🚀🚀🎮🕹️🎮🕹️
+                                       BYTEBATTLES (Best work on Desktop) 🚀🚀🎮🕹️🎮🕹️
 Welcome to ByteBattles, where gaming enthusiasts find a haven for all their virtual adventures! 
 Immerse yourself in a world of gaming excellence as you explore our carefully curated selection of the latest and greatest titles across various platforms.
 
