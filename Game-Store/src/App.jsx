@@ -29,7 +29,7 @@ function App() {
       ) : (
         <div
           className={`${theme} ${
-            theme == "dark" ? "bg-black" : "bg-gradient-to-r from-rose-100 to-teal-100"
+            theme == "dark" ? "bg-black" : "bg-gradient-to-r from-rose-300 to-teal-300"
           } min-h-[100vh] `}
         >
           <Header />

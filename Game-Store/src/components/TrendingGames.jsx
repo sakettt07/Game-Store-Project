@@ -5,7 +5,7 @@ import 'slick-carousel/slick/slick-theme.css';
 
 const TrendingGames = ({ gamelist }) => {
     useEffect(() => {
-        console.log(gamelist);
+        // console.log(gamelist);
     }, []);
 
     const settings = {
@@ -43,10 +43,10 @@ const TrendingGames = ({ gamelist }) => {
         <div className='mt-5 hidden md:block'>
             <h1 className='font-bold text-[33px] mb-2 dark:text-white'>Trending Games</h1>
 
-            <div className='hidden md:grid md:grid-cols-1 md:gap-5 lg:grid-cols-1'>
+            <div className='hidden md:grid md:grid-cols-1 lg:grid-cols-1'>
                 <Slider {...settings}>
                     {gamelist.map((item, index) => (
-                        <div key={index} className=' gap-9 rounded-xl bg-white/20 shadow-lg ring-1 ring-black/5 group hover:scale-95 cursor-pointer transition-all duration-100 ease-in'>
+                        <div key={index} className=' rounded-xl bg-white/20 shadow-lg ring-1 ring-black/5 group hover:scale-95 cursor-pointer transition-all duration-100 ease-in'>
                             <img src={item.background_image} className='rounded-lg object-cover rounded-b-none h-[270px]' alt={item.name} />
                             <h2 className='dark:text-white text-[17px] font-semibold p-2'>{item.name}</h2>
                         </div>

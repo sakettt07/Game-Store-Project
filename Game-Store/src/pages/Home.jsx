@@ -10,7 +10,7 @@ const Home = () => {
   const [gamelistbygenre,setGameListByGenre]=useState([]);
   useEffect(() => {
     getAllGamesList();
-    getGameListByGenreId();
+    getGameListByGenreId(4);
   });
   const getAllGamesList = () => {
     GlobalApi.getAllGames.then((resp) => {
@@ -19,16 +19,18 @@ const Home = () => {
     });
   };
   const getGameListByGenreId=(id)=>{
-    GlobalApi.getGameListByGenreId(6).then((resp)=>{
+    // console.log("genreid",id);
+    GlobalApi.getGameListByGenreId(id).then((resp)=>{
       // console.log("Game list by genre id",resp.data.results);
       setGameListByGenre(resp.data.results);
+      
     })
 
   }
   return (
     <div className="grid grid-cols-4 px-8">
       <div className="h-full hidden md:block">
-        <GenreList />
+        <GenreList setGenresId={(setGenresId)=>getGameListByGenreId(setGenresId)} />
       </div>
       <div className="col-span-4 md:col-span-3">
         {allgamelist?.length > 0&&gamelistbygenre.length>0 ? (

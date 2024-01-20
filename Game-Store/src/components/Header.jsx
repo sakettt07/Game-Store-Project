@@ -13,7 +13,8 @@ const Header = () => {
   },[])
   return (
     <div className="flex items-center mx-5">
-      <img src={logo} width={120} height={50} className="p-5" />
+      <img src={logo} className="p-6 w-[130px] h-[140px]" />
+
       <div className="flex bg-slate-50 p-4 mt-2 items-center w-[70%] rounded-full">
         <IoSearch />
         <input
@@ -25,7 +26,7 @@ const Header = () => {
       <div className="px-7 fle pt-5 w-[50px] h-[54px] ">
         {theme=='light' ? (
           <FaMoon
-            className="bg-slate-300 text-[35px] p-2 text-black rounded-full cursor-pointer mt-[-6px]"
+            className="bg-slate-300 text-[40px] p-2 text-black rounded-full cursor-pointer mt-[-6px]"
             onClick={() => {setTheme('dark');localStorage.setItem('theme','dark')}}
           />
         ) : (
